@@ -140,51 +140,57 @@ function btnClick(id, op)
 
 function carregarVisualizador(status)
 {
-    preco_correto = preco.value.replace(",", ".");
-
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function()
+    if(verificaCampos())
     {
-        if (xhttp.readyState == 4 && xhttp.status == 200)
-        {
-            document.getElementById("prototipo_produto").innerHTML = xhttp.responseText;
-        }
-    };
+        preco_correto = preco.value.replace(",", ".");
 
-    xhttp.open("POST", "../_phps/visualizar_produto.php", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("status="+status+"&nome=" + nome.value + "&quantidade=" + quantidade.value + "&peso=" + peso.value +     "&preco=" + preco_correto + "&validade=" + validade.valueAsDate.toLocaleDateString() + "&categoria=" + categoria.value + "&descricao=" + descricao.value + "&imagem=" + imagem.src);
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function()
+        {
+            if (xhttp.readyState == 4 && xhttp.status == 200)
+            {
+                document.getElementById("prototipo_produto").innerHTML = xhttp.responseText;
+            }
+        };
+
+        xhttp.open("POST", "../_phps/visualizar_produto.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("status="+status+"&nome=" + nome.value + "&quantidade=" + quantidade.value + "&peso=" + peso.value +     "&preco=" + preco_correto + "&validade=" + validade.valueAsDate.toLocaleDateString() + "&categoria=" + categoria.value + "&descricao=" + descricao.value + "&imagem=" + imagem.src);
+    }
 }
 
 function btnAlterar(id)
 {
-    preco_correto = preco.value.replace(",", ".");
-
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function()
+    if(!verificaCampos())
     {
-        if (xhttp.readyState == 4 && xhttp.status == 200)
+        preco_correto = preco.value.replace(",", ".");
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function()
         {
-            document.getElementById("visualizar_produto").innerHTML = xhttp.responseText;
-        }
-    };
+            if (xhttp.readyState == 4 && xhttp.status == 200)
+            {
+                document.getElementById("visualizar_produto").innerHTML = xhttp.responseText;
+            }
+        };
 
-    var url = "../_phps/visualizar_produto.php";
+        var url = "../_phps/visualizar_produto.php";
 
-    xhttp.open("POST", url, true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("status=2&nome=" + nome.value + "&quantidade=" + quantidade.value + "&peso=" + peso.value + "&preco=" + preco_correto + "&validade=" + validade.value + "&categoria=" + categoria.value + "&descricao=" + descricao.value + "&imagem=null&id=" + id);
+        xhttp.open("POST", url, true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("status=2&nome=" + nome.value + "&quantidade=" + quantidade.value + "&peso=" + peso.value + "&preco=" + preco_correto + "&validade=" + validade.value + "&categoria=" + categoria.value + "&descricao=" + descricao.value + "&imagem=null&id=" + id);
 
-    nome.value = "";
-    quantidade.value = "";
-    peso.value = "";
-    preco.value = "";
-    validade.value = "";
-    categoria.value = "";
-    descricao.value = "";
-    button = document.getElementById("btn_add");
-    button.value = "Adicionar";
-    button.onclick = carregarVisualizador(1);
+        nome.value = "";
+        quantidade.value = "";
+        peso.value = "";
+        preco.value = "";
+        validade.value = "";
+        categoria.value = "";
+        descricao.value = "";
+        button = document.getElementById("btn_add");
+        button.value = "Adicionar";
+        button.onclick = carregarVisualizador(1);
+    }
 }
 
 function carregarImagem()
@@ -246,6 +252,40 @@ function carregaFoto()
 
 function addImagem()
 {
-    window.open("../_telas/imagens.php", "imagens", "height=6   00,width=600");
-    window.alert('oi');
+    window.open("../_telas/imagens.php?tela=" + this, "imagens", "height=600,width=600");
+    //window.alert('oi');
+}
+
+function subirTela()
+{
+    window.scrollTo(0, 0);
+}
+
+function verificaCampos()
+{
+    if((nome.value != "")
+        && (quantidade.value > 0)
+        && (peso.value != "")
+        && (preco.value != "")
+        && (validade.valueAsDate != null)
+        && (categoria.selectedIndex != 0)
+        && (imagem.src != ""))
+    {
+        var data = validade.valueAsDate.toLocaleDateString().split("/");
+        var newData = data[1] + "/" + data[0] + "/" + data[2];
+        validade_timestamp = (new Date(newData).getTime());
+
+        if(validade_timestamp > (new Date().getTime()))
+            return true;
+        else
+        {
+            window.alert("data de validade inválida");
+            return false;
+        }
+    }
+    else
+    {
+        window.alert("campos obrigatórios faltando");
+        return false;
+    }
 }

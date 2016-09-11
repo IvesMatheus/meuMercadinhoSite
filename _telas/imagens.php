@@ -34,7 +34,7 @@
                 {
                     echo "<div id='item_imagem'>";
                     echo "<img src='../".$value->getCaminho()."' ondblclick=''/>";
-                    echo "<input type='button' value='Selecionar' class='btn' onclick=''/>";
+                    echo "<input type='button' value='Selecionar' class='btn' onclick='selecionar()'/>";
                     echo "</div>";
                 }
             ?>

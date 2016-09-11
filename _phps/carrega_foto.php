@@ -16,6 +16,6 @@
 
     echo "<img id='imagem' src='".$caminho."'/>
         <figcaption>Adicionar imagem</figcaption>
-        <input type='button' value='L' class='btn' onclick='mudaFoto(-1)'/>
-        <input type='button' value='R' class='btn' onclick='mudaFoto(1)'/>";
+        <input id='prev' type='button' value='L' class='btn' onclick='mudaFoto(-1)'/>
+        <input id='next' type='button' value='R' class='btn' onclick='mudaFoto(1)'/>";
 ?>

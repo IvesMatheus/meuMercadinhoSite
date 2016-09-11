@@ -33,7 +33,7 @@
             <header id="cabecalho">
                 <figure>
                     <a href="index.php">
-                        <img id="logo" src="_imagens/LOGO 01.png"; width="200px"/>
+                        <img id="logo" src="_imagens/logo.png"; width="200px"/>
                     </a>
                     <figcaption>Logo do meuMercadinho</figcaption>
                 </figure>

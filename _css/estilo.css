@@ -6,7 +6,7 @@ html
 body
 {
     font-family: sans-serif;
-    background-color: #C0DA93;
+    background-color: #FF8D51;
     margin: 0px auto 0px auto;
     height: 100%;
 }
@@ -66,7 +66,7 @@ nav#menu ul
 nav#menu li
 {
     display: inline-block;
-    background-color: #F0F8E2;
+    background-color: #FFA879;
     padding: 10px;
     margin: 2px;
     transition: background-color 1s;
@@ -74,13 +74,13 @@ nav#menu li
 
 nav#menu li:hover
 {
-    background-color: #729439;
+    background-color: #A03800;
 }
 
 nav#menu a
 {
     text-decoration: none;
-    color: #97B760;
+    color: #F26D26;
 }
 
 nav#menu a:hover
@@ -93,7 +93,7 @@ nav#navegacao
 {
     width: 90%;
     margin: 0px auto 0px auto;
-    border-top: 1px solid #97B760;
+    border-top: 1px solid #F26D26;
     text-align: left;
     padding: 5px;
 }
@@ -111,7 +111,7 @@ nav#navegacao li
 
 nav#navegacao a
 {
-    color: #97B760;
+    color: #FFA879;
 }
 
 /* ESTILO DO LOGIN */
@@ -192,15 +192,15 @@ div#categorias
 div#categorias h1
 {
     font-size: 18pt;
-    color: #729439;
-    border-top: 1px solid #97B760;
+    color: #CA4D0A;
+    border-top: 1px solid #F26D26;
     padding-top: 20px;
 }
 
 div.item_categoria
 {
     width: auto;
-    color: #97B760;
+    color: #FF8D51;
     font-size: 14pt;
     margin: 10px auto 10px auto;
     text-align: left;
@@ -216,7 +216,7 @@ div#produtos
 {
     width: 80%;
     float:left;
-    border-left: 1px solid #97B760;
+    border-left: 1px solid #F26D26;
     box-sizing: border-box;
 }
 
@@ -241,14 +241,14 @@ div.item_produto
     margin: 10px;
     float: left;
     text-align: center;
-    border: 1px solid #C0DA93;
+    border: 1px solid #FFA879;
     padding: 10px;
     box-sizing: border-box;
 }
 
 div.item_produto:hover
 {
-    border: 1px solid #97B760;
+    border: 1px solid #F26D26;
 }
 
 div.item_produto img
@@ -266,7 +266,7 @@ div.item_produto p
 div.dado_preco
 {
     font-size: 14pt;
-    color: #729439;
+    color: #CA4D0A;
     font-weight: bolder;
 }
 
@@ -303,7 +303,7 @@ div#formulario
 {
     width: 40%;
     float:left;
-    border-right: 1px solid #C0DA93;
+    border-right: 1px solid #F26D26;
     box-sizing: border-box;
 }
 
@@ -367,13 +367,13 @@ figure#img_produto input:hover
     opacity: 1;
 }
 
-figure#img_produto [value=L]
+figure#img_produto [id=prev]
 {
     top: 90px;
     left: 0px;
 }
 
-figure#img_produto [value=R]
+figure#img_produto [id=next]
 {
     top: 90px;
     left: 112px;
@@ -409,6 +409,15 @@ div#add_menu
     text-align: center;
     clear: both;
     padding-bottom: 10px;
+}
+
+div.direita
+{
+    float: left;
+    width: 100%;
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 /* ESTILO DE EDIÇÃO DE PRODUTO */
@@ -477,7 +486,7 @@ header#cabecalho_perfil figcaption
 header#cabecalho_perfil h1
 {
     font-size: 24pt;
-    color: #729439;
+    color: #CA4D0A;
     margin: 0px auto 10px auto;
 }
 
@@ -490,7 +499,7 @@ div#info1
 div#info1 h1
 {
     font-size: 18pt;
-    color: #729439;
+    color: #CA4D0A;
     margin: 0px auto 20px auto;
 }
 
@@ -542,7 +551,7 @@ div#entrega div
 div#entrega h1
 {
     font-size: 18pt;
-    color: #729439;
+    color: #CA4D0A;
     margin: 0px auto 20px auto;
     text-align: center;
 }
@@ -558,7 +567,7 @@ div#dados_sem_servico_entrega
 .lbl_info
 {
     font-size: 12pt;
-    color: #97B760;
+    color: #FFA879;
 }
 
 .lbl_dado
@@ -601,7 +610,7 @@ div#item_imagem
     margin: 10px;
     padding: 5px;
     box-sizing: border-box;
-    border: 1px solid #C0DA93;
+    border: 1px solid #F26D26;
 }
 
 div#item_imagem input
@@ -617,7 +626,7 @@ footer#rodape
     width: 90%;
     height: 10%;
     margin: auto;
-    border-top: 1px solid #97B760;
+    border-top: 1px solid #F26D26;
     padding-top: 20px;
     background-color: white;
     box-sizing: border-box;

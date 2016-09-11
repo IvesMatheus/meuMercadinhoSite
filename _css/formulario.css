@@ -4,17 +4,57 @@
 
 .btn
 {
-    background-color: #97B760;
+    background-color: #F26D26;
     color: white;
     padding: 10px;
-    border: .5px solid #729439;
+    border: .5px solid #A03800;
     border-radius: 5px;
     transition: background-color .4s;
 }
 
+#up
+{
+    background-image: url("../_imagens/icon_arrow_up.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+#prev
+{
+    background-image: url("../_imagens/icon_arrow_left.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+#next
+{
+    background-image: url("../_imagens/icon_arrow_right.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+#search
+{
+    background-image: url("../_imagens/icon_search_lookup.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
 .btn:hover
 {
-    background-color: #729439;
+    background-color: #A03800;
 }
 
 /* ESTILO DE LABELS */
@@ -32,14 +72,14 @@
     width: 100px;
     height: 20px;
     padding: 5px;
-    border: 1px solid #729439;
+    border: 1px solid #F26D26;
     border-radius: 5px;
     margin: 5px 0px 5px 0px;
 }
 
 .txt_pequeno:focus
 {
-    box-shadow: 0px 0px 10px #729439;
+    box-shadow: 0px 0px 10px #F26D26;
 }
 
 .txt_medio
@@ -47,14 +87,14 @@
     width: 200px;
     height: 20px;
     padding: 5px;
-    border: 1px solid #729439;
+    border: 1px solid #F26D26;
     border-radius: 5px;
     margin: 5px 0px 5px 0px;
 }
 
 .txt_medio:focus
 {
-    box-shadow: 0px 0px 10px #729439;
+    box-shadow: 0px 0px 10px #F26D26;
 }
 
 .txt_grande
@@ -62,14 +102,14 @@
     width: 300px;
     height: 20px;
     padding: 5px;
-    border: 1px solid #729439;
+    border: 1px solid #F26D26;
     border-radius: 5px;
     margin: 5px 0px 5px 0px;
 }
 
 .txt_grande:focus
 {
-    box-shadow: 0px 0px 10px #729439;
+    box-shadow: 0px 0px 10px #F26D26;
 }
 
 .txt_extra_grande
@@ -77,14 +117,14 @@
     width: 500px;
     height: 20px;
     padding: 5px;
-    border: 1px solid #729439;
+    border: 1px solid #F26D26;
     border-radius: 5px;
     margin: 5px 0px 5px 0px;
 }
 
 .txt_extra_grande:focus
 {
-    box-shadow: 0px 0px 10px #729439;
+    box-shadow: 0px 0px 10px #F26D26;
 }
 
 select
@@ -97,12 +137,12 @@ select
 
 select:focus
 {
-    box-shadow: 0px 0px 10px #729439;
+    box-shadow: 0px 0px 10px #F26D26;
 }
 
 textarea
 {
-    border: 1px solid #729439;
+    border: 1px solid #F26D26;
     margin: 5px 0px 5px 0px;
     border-radius: 5px;
     padding: 5px;
@@ -110,5 +150,5 @@ textarea
 
 textarea:focus
 {
-    box-shadow: 0px 0px 10px #729439;
+    box-shadow: 0px 0px 10px #F26D26;
 }

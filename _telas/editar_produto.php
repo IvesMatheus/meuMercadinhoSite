@@ -54,7 +54,7 @@
             <header id="cabecalho">
                 <figure>
                     <a href="../index.php">
-                        <img id="logo" src="../_imagens/LOGO 01.png"; width="200px"/>
+                        <img id="logo" src="../_imagens/logo.png"; width="200px"/>
                     </a>
                     <figcaption>Logo do meuMercadinho</figcaption>
                 </figure>
@@ -77,12 +77,15 @@
             </nav>
             <div id="formulario_edt">
                 <form>
-                    <figure id="img_produto">
-                        <img id="imagem" src="../<?= $v_imagem ?>"/>
-                        <figcaption>Adicionar imagem</figcaption>
-                        <input type="button" value="L" class="btn" onclick="mudaFoto(-1)"/>
-                        <input type="button" value="R" class="btn" onclick="mudaFoto(1)"/>
-                    </figure>
+                    <div id="add_imagem">
+                        <figure id="img_produto">
+                            <img id="imagem" src="../<?= $v_imagem ?>"/>
+                            <figcaption>Adicionar imagem</figcaption>
+                            <input id="prev" type="button" class="btn" onclick="mudaFoto(-1)"/>
+                            <input id="next" type="button" class="btn" onclick="mudaFoto(1)"/>
+                        </figure>
+                        <input id="procurar_imagem" type="button" value="procurar imagem" class="btn" onclick="addImagem()"/>
+                    </div>
                     <div id="inputs">
                         <label for="nome">Nome:</label><br>
                         <input id="nome" name="nome" type="text" class="txt_medio" value="<?= $v_nome ?>"/><br>
@@ -104,10 +107,15 @@
 
                                 foreach ($categorias as $key => $value)
                                 {
-                                    if($value->getId() == $v_categoria)
-                                        $s = "selected='true'";
+                                    if($v_categoria != "")
+                                    {
+                                        if($value->getId() == $v_categoria)
+                                            $s = "selected='true'";
+                                        else
+                                            $s = "";
+                                    }
                                     else
-                                        $s = "selected='false'";
+                                        $s = "";
 
                                     echo "<option value='".$value->getId()."' ".$s.">".$value->getNome()."</option>";
                                 }

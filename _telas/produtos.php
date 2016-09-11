@@ -25,6 +25,11 @@
             $p_id = "sem_produto";
             $div_id = "s_produto";
         }
+
+        if(isset($_SESSION["add_produtos"]))
+        {
+            $_SESSION["add_produtos"] = FALSE;
+        }
     }
     else
     {
@@ -50,7 +55,7 @@
             <header id="cabecalho">
                 <figure>
                     <a href="../index.php">
-                        <img id="logo" src="../_imagens/LOGO 01.png"; width="200px"/>
+                        <img id="logo" src="../_imagens/logo.png"; width="200px"/>
                     </a>
                     <figcaption>Logo do meuMercadinho</figcaption>
                 </figure>
@@ -91,7 +96,7 @@
                 <div id="produtos">
                     <div id="filtro">
                         <input id="nome_produto" type="text" class="txt_extra_grande"/>
-                        <input type="button" value="Procurar" class="btn" onclick="filtrarProdutoPorNome()"/>
+                        <input id="search" type="button" class="btn" onclick="filtrarProdutoPorNome()"/>
                     </div>
                     <div id="itens">
                         <?php

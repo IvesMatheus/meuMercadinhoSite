@@ -54,7 +54,7 @@
                 $v_quantidade = $produto->getQuantidade();
                 $v_peso = $produto->getPeso();
                 $v_preco = $produto->getPreco();
-                $v_validade = $produto->getValidade();
+                $v_validade = date('d/m/Y', $produto->getValidade());
                 $v_categoria = $produto->getCategoria()->getId();
                 $v_descricao = $produto->getDescricao();
             }
@@ -98,7 +98,7 @@
             <header id="cabecalho">
                 <figure>
                     <a href="../index.php">
-                        <img id="logo" src="../_imagens/LOGO 01.png"; width="200px"/>
+                        <img id="logo" src="../_imagens/logo.png"; width="200px"/>
                     </a>
                     <figcaption>Logo do meuMercadinho</figcaption>
                 </figure>
@@ -126,8 +126,8 @@
                             <figure id="img_produto">
                                 <img id="imagem" src=""/>
                                 <figcaption>Adicionar imagem</figcaption>
-                                <input type="button" value="L" class="btn" onclick="mudaFoto(-1)"/>
-                                <input type="button" value="R" class="btn" onclick="mudaFoto(1)"/>
+                                <input id="prev" type="button" class="btn" onclick="mudaFoto(-1)"/>
+                                <input id="next" type="button" class="btn" onclick="mudaFoto(1)"/>
                             </figure>
                             <input id="procurar_imagem" type="button" value="procurar imagem" class="btn" onclick="addImagem()"/>
                         </div>
@@ -146,16 +146,23 @@
                             <input id="validade" name="validade" type="date" class="txt_medio" value="<?= $v_validade ?>"/><br>
                             <label for="categoria">Categoria:</label><br>
                             <select id="categoria" name="categoria" onchange="carregaFoto()">
+                                <option></option>
                                 <?php
                                     $categoriaDAO = new CategoriaDAO();
                                     $categorias = $categoriaDAO->listar();
 
                                     foreach ($categorias as $key => $value)
                                     {
-                                        if($value->getId() == $v_categoria)
-                                            $s = "selected='true'";
+                                        if($v_categoria != "")
+                                        {
+                                            if($value->getId() == $v_categoria)
+                                                $s = "selected='true'";
+                                            else
+                                                $s = "";
+                                        }
                                         else
-                                            $s = "selected='false'";
+                                            $s = "";
+
                                         echo "<option value='".$value->getId()."' ".$s.">".$value->getNome()."</option>";
                                     }
                                 ?>
@@ -203,6 +210,9 @@
                         <input type="button" class="btn" value="Finalizar" onclick="finalizar()"/>
                     </div>
                 </div>
+            </div>
+            <div class="direita">
+                <input id="up" type="button" class="btn" onclick="subirTela()"/>
             </div>
         </div>
         <footer id="rodape">
