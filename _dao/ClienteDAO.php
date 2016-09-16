@@ -126,6 +126,46 @@
         }
 
         /**
+        * Método que verifica login
+        * @param $cliente objeto de Cliente contendo os dados de login e senha
+        * @return objeto de Cliente
+        * @version 1
+        * @author Ives Matheus
+        */
+        public function login($cliente)
+        {
+            $retorno = null;
+
+            try
+            {
+                $con = Conexao::getConexao();
+                $sql = "SELECT * FROM cliente WHERE login = :login AND senha = :senha";
+
+                $stm = $con->prepare($sql);
+                $stm->bindValue("login", $cliente->getLogin());
+                $stm->bindValue("senha", $cliente->getSenha());
+                $stm->execute();
+
+                while($row = $stm->fetch())
+                {
+                    $retorno = new Cliente();
+                    $retorno->setId($row["id"]);
+                    $retorno->setNome($row["nome"]);
+                    $retorno->setLogin($row["login"]);
+                    $retorno->setSenha($row["senha"]);
+                }
+            }
+            catch (PDOException $e)
+            {
+                echo $e->getMessage();
+            }
+            finally
+            {
+                return $retorno;
+            }
+        }
+
+        /**
         * Método que atualiza os dados de um cliente no BD
         * @param $cliente objeto de Cliente contendo os dados a serem atualizados e o id do cliente que vai atualizar
         * @return verdadeiro ou falso para caso de sucesso na atualização dos dados

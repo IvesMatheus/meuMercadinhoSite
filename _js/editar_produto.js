@@ -177,3 +177,9 @@ function carregaFoto()
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("categoria=" + categoria);
 }
+
+function addImagem()
+{
+    window.open("../_telas/imagens.php", "imagens", "height=600,width=600");
+    //window.alert('oi');
+}

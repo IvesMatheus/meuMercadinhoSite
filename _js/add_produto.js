@@ -193,6 +193,7 @@ function btnAlterar(id)
     }
 }
 
+/* UPLOAD DE IMAGEM
 function carregarImagem()
 {
     var btnCarregarImagem = document.getElementById("btnCarregarImagem");
@@ -205,6 +206,7 @@ function carregarImagem()
         reader.readAsDataURL(file);
     }
 }
+*/
 
 function btnCancelar()
 {
@@ -252,7 +254,7 @@ function carregaFoto()
 
 function addImagem()
 {
-    window.open("../_telas/imagens.php?tela=" + this, "imagens", "height=600,width=600");
+    window.open("../_telas/imagens.php", "imagens", "height=600,width=600");
     //window.alert('oi');
 }
 

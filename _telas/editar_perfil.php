@@ -1,5 +1,4 @@
 <?php
-    include_once "../_model/Mercado.php";
     include_once "../_dao/ProdutoDAO.php";
     session_start();
 
@@ -33,7 +32,6 @@
         return $aux;
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -63,7 +61,9 @@
                 <ul>
                     <li><a href="../index.php">Home</a></li>
                     <li>&gt;</li>
-                    <li>Perfil</li>
+                    <li><a href="perfil.php">Perfil</a></li>
+                    <li>&gt;</li>
+                    <li>Editar Perfil</li>
                 </ul>
             </nav>
             <header id="cabecalho_perfil">
@@ -71,58 +71,45 @@
                     <img src="" width="150px">
                     <figcaption>Imagem ilustrativa do <?= $mercado->getNome() ?></figcaption>
                 </figure>
-                <h1><?= $mercado->getNome() ?></h1>
+                <span class="lbl_info">Login<br></span>
+                <input id="nome" type="text" class="txt_medio" value="<?= $mercado->getNome() ?>" />
             </header>
             <div id="info1">
                 <div id="info_basica">
                     <h1>Informações básicas</h1>
                     <div>
                         <span class="lbl_info">Login<br></span>
-                        <span class="lbl_dado">
-                            <?= $mercado->getLogin() ?>
-                        </span>
+                        <input id="login" type="text" class="txt_medio" value="<?= $mercado->getLogin() ?>" />
                     </div>
                     <div>
                         <span class="lbl_info">Senha<br></span>
-                        <label id="senha" class="lbl_dado">
-                            <?= ocultarSenha($mercado->getSenha()) ?>
-                        </label>
+                        <input id="senha" type="password" class="txt_medio" value="<?= ocultarSenha($mercado->getSenha()) ?>" />
                     </div>
                     <div>
                         <input id="mostraSenha" type="checkbox" onclick="mostrarSenha('<?= $mercado->getSenha() ?>')" />&nbsp;Mostrar senha
                     </div>
                     <div>
                         <span class="lbl_info">Código<br></span>
-                        <span class="lbl_dado">
-                            <?= $mercado->getCodigo() ?>
-                        </span>
+                        <input id="codigo" type="text" class="txt_medio" value="<?= $mercado->getCodigo() ?>" />
                     </div>
                 </div>
                 <div id="endereco">
                     <h1>Endereço</h1>
                     <div>
                         <span class="lbl_info">Rua<br></span>
-                        <span class="lbl_dado">
-                            <?= $mercado->getRua() ?>
-                        </span>
+                        <input id="rua" type="text" class="txt_grande" value="<?= $mercado->getRua() ?>" />
                     </div>
                     <div>
                         <span class="lbl_info">Número<br></span>
-                        <span class="lbl_dado">
-                            <?= $mercado->getNumero() ?>
-                        </span>
+                        <input id="numero" type="text" class="txt_pequeno" value="<?= $mercado->getNumero() ?>" />
                     </div>
                     <div>
                         <span class="lbl_info">Bairro<br></span>
-                        <span class="lbl_dado">
-                            <?= $mercado->getBairro() ?>
-                        </span>
+                        <input id="bairro" type="text" class="txt_medio" value="<?= $mercado->getBairro() ?>" />
                     </div>
                     <div>
                         <span class="lbl_info">Complemento<br></span>
-                        <span class="lbl_dado">
-                            <?= $mercado->getComplemento() ?>
-                        </span>
+                        <input id="complemento" type="text" class="txt_grande" value="<?= $mercado->getComplemento() ?>" />
                     </div>
                 </div>
             </div>
@@ -130,47 +117,41 @@
                 <?php
                     if($mercado->getServicoEntrega())
                     {
-                        $h1 = "Seu mercado possui servico de entrega";
+                        $s = "checked";
                         $id_div = "dados_servico_entrega";
                     }
                     else
                     {
-                        $h1 = "Seu mercado não possui servico de entrega";
+                        $s = "";
                         $id_div = "dados_sem_servico_entrega";
                     }
                 ?>
-                <h1><?= $h1 ?></h1>
+                <div class="center">
+                    <input id="servico_entrega" type="checkbox" onclick="servicoEntrega()"  <?= $s ?>/>
+                    &nbsp;<span class="lbl_grande">Serviço de Entrega</span>
+                </div>
                 <div>
                     <span class="lbl_info">Hora abertura<br></span>
-                    <span class="lbl_dado">
-                        <?= $mercado->getHoraAbertura() ?>
-                    </span>
+                    <input id="hora_abertura" type="number" min="0" class="txt_pequeno" value="<?= $mercado->getHoraAbertura() ?>" />
                 </div>
                 <div>
                     <span class="lbl_info">Hora encerramento<br></span>
-                    <span class="lbl_dado">
-                        <?= $mercado->getHoraFechamento() ?>
-                    </span>
+                    <input id="hora_encerramento" type="number" min="0" class="txt_pequeno" value="<?= $mercado->getHoraFechamento() ?>" />
                 </div>
                 <div id="<?= $id_div ?>">
                     <div>
                         <span class="lbl_info">Taxa de entrega<br></span>
-                        <span class="lbl_dado">
-                            <?= $mercado->getTaxaEntrega() ?>
-                        </span>
+                        <input id="taxa_entrega" type="text" class="txt_pequeno" value="<?= $mercado->getTaxaEntrega() ?>" />
                     </div>
                     <div>
                         <span class="lbl_info">Valo mínimo de compra<br></span>
-                        <span class="lbl_dado">
-                            <?= $mercado->getVmc() ?>
-                        </span>
+                        <input id="vmc" type="text" class="txt_pequeno" value="<?= $mercado->getVmc() ?>" />
                     </div>
                 </div>
             </div>
             <div id="opcoes">
-                <input type="button" value="Editar perfil" class="btn" onclick="editarPerfil()"/>
-                <input type="button" value="Visualizar mapa" class="btn" onclick="mapa()"/>
-                <input type="button" value="Logout" class="btn" onclick="logout()"/>
+                <input type="button" value="Salvar Alterações" class="btn" onclick="salvar()"/>
+                <input type="button" value="Cancelar" class="btn" onclick="cancelar()"/>
             </div>
             <br>
         </div>
@@ -178,6 +159,6 @@
             &copy; Copyright 2016 - by RAIMAK<br>
             Facebook | Twitter
         </footer>
-        <script language="javascript" src="../_js/perfil.js"></script>
+        <script language="javascript" src="../_js/editar_perfil.js"></script>
     </body>
 </html>

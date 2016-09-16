@@ -312,6 +312,27 @@
             return $this->senha;
         }
 
+        public function toArray()
+        {
+            return array('id'=>$this->id,
+                        'nome'=>$this->nome,
+                        'rua'=>$this->rua,
+                        'numero'=>$this->numero,
+                        'bairro'=>$this->bairro,
+                        'complemento'=>$this->complemento,
+                        'codigo'=>$this->codigo,
+                        'latitude'=>$this->latitude,
+                        'longitude'=>$this->longitude,
+                        'hora_abertura'=>$this->hora_abertura,
+                        'hora_fechamento'=>$this->hora_fechamento,
+                        'logo'=>$this->logo,
+                        'servico_entrega'=>$this->servico_entrega,
+                        'taxa_entrega'=>$this->taxa_entrega,
+                        'vmc'=>$this->vmc,
+                        'login'=>$this->login,
+                        'senha'=>$this->senha);
+        }
+
         public function __toString()
         {
             return $this->id."<br>".$this->nome."<br>".$this->rua."<br>".$this->bairro."<br>".$this->numero."<br>".$this->complemento."<br>".$this->codigo."<br>".$this->latitude."<br>".$this->longitude."<br>".$this->hora_abertura."<br>".$this->hora_fechamento."<br>".$this->logo."<br>".$this->servico_entrega."<br>".$this->taxa_entrega."<br>".$this->vmc."<br>".$this->login."<br>".$this->senha."<br>";

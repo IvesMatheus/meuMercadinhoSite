@@ -91,6 +91,11 @@
             return $this->senha;
         }
 
+        public function toArray()
+        {
+            return array('id'=>$this->id, 'nome'=>$this->nome, 'login'=>$this->login, 'senha'=>$this->senha);
+        }
+
         public function __toString()
         {
             return $this->id."<br>".$this->nome."<br>".$this->login."<br>".$this->senha."<br>";

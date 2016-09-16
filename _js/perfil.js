@@ -25,6 +25,11 @@ function mapa()
     window.open("../_telas/mapa.php", "minhaJanela", "height=500,width=500");
 }
 
+function editarPerfil()
+{
+    window.location = "editar_perfil.php";
+}
+
 /*
 btnEditarPerfil = document.getElementById("btnEditarPerfil");
 btnEditarPerfil.onclick = function ()

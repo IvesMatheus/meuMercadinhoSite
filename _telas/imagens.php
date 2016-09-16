@@ -33,8 +33,8 @@
                 foreach ($imagens as $key => $value)
                 {
                     echo "<div id='item_imagem'>";
-                    echo "<img src='../".$value->getCaminho()."' ondblclick=''/>";
-                    echo "<input type='button' value='Selecionar' class='btn' onclick='selecionar()'/>";
+                    echo "<img src='../".$value->getCaminho()."' ondblclick='selecionar(".$value->getId().")'/>";
+                    echo "<input type='button' value='Selecionar' class='btn' onclick='selecionar(".$value->getId().")'/>";
                     echo "</div>";
                 }
             ?>
