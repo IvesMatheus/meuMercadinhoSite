@@ -193,6 +193,11 @@
             return $this->mercado;
         }
 
+        public function toArray()
+        {
+            return array('id'=>$this->id, 'nome'=>$this->nome, 'peso'=>$this->peso, 'validade'=>$this->validade, 'quantidade'=>$this->quantidade, 'preco'=>$this->preco, 'imagem'=>$this->imagem->toArray(), 'categoria'=>$this->categoria->toArray(), 'descricao'=>$this->descricao, 'mercado'=>$this->mercado->toArray());
+        }
+
         public function __toString()
         {
             return $this->id."<br>".$this->nome."<br>".$this->peso."<br>".$this->validade."<br>".$this->quantidade."<br>".$this->preco."<br>".$this->imagem."<br>".$this->categoria."<br>".$this->descricao."<br>".$this->mercado;

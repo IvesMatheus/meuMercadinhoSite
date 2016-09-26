@@ -91,6 +91,11 @@
             return $this->imagem;
         }
 
+        public function toArray()
+        {
+            return array('id'=>$this->id, 'nome'=>$this->nome, 'descricao'=>$this->descricao, 'imagem'=>$this->imagem);
+        }
+
         public function __toString()
         {
             return $this->id."<br>".$this->nome."<br>".$this->descricao."<br>".$this->imagem;

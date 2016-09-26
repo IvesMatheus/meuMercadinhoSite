@@ -68,6 +68,11 @@
             return $this->quantidade;
         }
 
+        public function toArray()
+        {
+            return array('pedido'=>$this->compra->toArray(), 'produto'=>$this->produto->toArray(), 'quantidade'=>$this->quantidade);
+        }
+
         public function __toString()
         {
             return $this->compra."<br>".$this->produto."<br>".$this->quantidade."<br>";

@@ -74,6 +74,11 @@
             return $this->categoria;
         }
 
+        public function toArray()
+        {
+            return array('id'=>$this->id, 'caminho'=>$this->caminho, 'categoia'=>$this->categoria->toArray());
+        }
+
         public function __toString()
         {
             return $this->id."<br>".$this->caminho."<br>".$this->categoria."<br>";

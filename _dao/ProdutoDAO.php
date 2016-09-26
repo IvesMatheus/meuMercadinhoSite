@@ -93,7 +93,7 @@
                     $produto->setPreco($row["preco"]);
                     $produto->setCategoria(CategoriaDAO::listarPorId(new Categoria($row["id_categoria"], "", "", "")));
                     $produto->setDescricao($row["descricao"]);
-                    $produto->setMercado(MercadoDAO::listarPorId(new Mercado($row["id_mercado"], "", "", "", "", "", "", "", "", "", "", "", "", "", "")));
+                    $produto->setMercado(MercadoDAO::listarPorId(new Mercado($row["id_mercado"], "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "")));
                     $produto->setImagem(ImagemDAO::listarPorId(new Imagem($row["id_imagem"], "", null)));
 
                     $retorno[$i] = $produto;
@@ -143,7 +143,7 @@
                     $produto->setPreco($row["preco"]);
                     $produto->setCategoria(CategoriaDAO::listarPorId(new Categoria($row["id_categoria"], "", "", "")));
                     $produto->setDescricao($row["descricao"]);
-                    $produto->setMercado(MercadoDAO::listarPorId(new Mercado($row["id_mercado"], "", "", "", "", "", "", "", "", "", "", "", "", "", "")));
+                    $produto->setMercado(MercadoDAO::listarPorId(new Mercado($row["id_mercado"], "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "")));
                     $produto->setImagem(ImagemDAO::listarPorId(new Imagem($row["id_imagem"], "", null)));
 
                     $retorno[$i] = $produto;
@@ -245,7 +245,7 @@
                     $produto->setPreco($row["preco"]);
                     $produto->setCategoria(CategoriaDAO::listarPorId(new Categoria($row["id_categoria"], "", "", "")));
                     $produto->setDescricao($row["descricao"]);
-                    $produto->setMercado(MercadoDAO::listarPorId(new Mercado($row["id_mercado"], "", "", "", "", "", "", "", "", "", "", "", "", "", "")));
+                    $produto->setMercado(MercadoDAO::listarPorId(new Mercado($row["id_mercado"], "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "")));
                     $produto->setImagem(ImagemDAO::listarPorId(new Imagem($row["id_imagem"], "", null)));
 
                     $retorno[$i] = $produto;

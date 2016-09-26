@@ -143,9 +143,16 @@
             return $this->cliente;
         }
 
+        public function toArray()
+        {
+            return array('id'=>$this->id, 'nome'=>$this->nome, 'rua'=>$this->rua, 'numero'=>$this->numero, 'bairro'=>$this->bairro, 'complemento'=>$this->complemento, 'cliente'=>$this->cliente->toArray());
+        }
+
+        /*
         public function __toString()
         {
             return $this->id."<br>".$this->nome."<br>".$this->rua."<br>".$this->bairro."<br>".$this->numero."<br>".$this->complemento."<br>".$this->cliente."<br>";
         }
+        */
     }
 ?>

@@ -47,6 +47,8 @@
         */
         private $status;
 
+        private $mercado;
+
         public static $DINHEIRO = 0;
         public static $CARTAO = 1;
 
@@ -61,7 +63,7 @@
             $args = func_get_args();
             $num_args = func_num_args();
 
-            if($num_args == 10)
+            if($num_args == 11)
             {
                 $this->id = $args[0];
                 $this->total = $args[1];
@@ -73,8 +75,9 @@
                 $this->entrega = $args[7];
                 $this->desc_canc = $args[8];
                 $this->status = $args[9];
+                $this->mercado = $args[10];
             }
-            else if($num_args == 9)
+            else if($num_args == 10)
             {
                 $this->id = 0;
                 $this->total = $args[0];
@@ -86,6 +89,7 @@
                 $this->entrega = $args[6];
                 $this->desc_canc = $args[7];
                 $this->status = $args[8];
+                $this->mercado = $args[9];
             }
             else
             {
@@ -99,6 +103,7 @@
                 $this->entrega = false;
                 $this->desc_canc = "";
                 $this->status = 0;
+                $this->mercado = null;
             }
         }
 
@@ -200,6 +205,21 @@
         public function getStatus()
         {
             return $this->status;
+        }
+
+        public function setMercado($mercado)
+        {
+            $this->mercado = $mercado;
+        }
+
+        public function getMercado()
+        {
+            return $this->mercado;
+        }
+
+        public function toArray()
+        {
+            return array('id'=>$this->id, 'total'=>$this->total, 'troco'=>$this->troco, 'forma_pagamento'=>$this->forma_pagamento, 'cliente'=>$this->cliente->toArray(), 'ponto_entrega'=>$this->ponto_entrega->toArray(), 'hora_busca'=>$this->hora_busca, 'entrega'=>$this->entrega, 'desc_canc'=>$this->desc_canc, 'status'=>$this->status, 'mercado'=>$this->mercado->toArray());
         }
 
         public function __toString()
