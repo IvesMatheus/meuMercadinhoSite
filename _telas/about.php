@@ -1,5 +1,5 @@
 <?php
-    include_once "../_model/Mercado.php";
+    include_once "_model/Mercado.php";
     session_start();
 
     $mercado = null;
@@ -8,19 +8,18 @@
 
     if($mercado != null)
     {
-        $href_login = "perfil.php";
+        $href_login = "_telas/perfil.php";
         $a_login = "perfil";
-        $produtos = "<li><a href='produtos.php'>produtos</a></li>";
+        $produtos = "<li><a href='_telas/produtos.php'>produtos</a></li>";
     }
     else
     {
         $href_login = "login.php";
         $a_login = "login";
         $produtos = "";
-
-        //header("Location: login.php");
     }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -34,11 +33,12 @@
         <div id="corpo">
             <header id="cabecalho">
                 <figure>
-                    <a href="../index.php">
+                    <a href="index.php">
                         <img id="logo" src="../_imagens/logo.png"; width="200px"/>
                     </a>
                     
-                         <figcaption><i>meuMercadinho - suas compras em um click.</i></figcaption>
+                        <figcaption><i>meuMercadinho - suas compras em um click.</i></figcaption>
+
                 </figure>
                 <nav id="menu">
                     <ul>
@@ -50,28 +50,25 @@
                     </ul>
                 </nav>
             </header>
-            <nav id="navegacao">
-                <ul>
-                    <li><a href="../index.php">Home</a></li>
-                    <li>&gt;</li>
-                    <li>Login</li>
-                </ul>
-            </nav>
-            <div id="login">
-                <form name="efetua_login" method="POST" action="../_phps/verificaLogin.php">
-                    <div id="nome">
-                        <label for="login" class="lbl">Login</label><br>
-                        <input name="login" type="text" class="txt_grande"/><br>
-                    </div>
-                    <div id="senha">
-                        <label for="senha" class="lbl">Senha</label><br>
-                        <input name="senha" type="password" class="txt_grande"/><br>
-                    </div>
-                    <div id="entrar">
-                        <input name="entrar" type="submit" value="Entrar" class="btn"/>
-                    </div>
-                </form>
+
+            <div id="sobre1">
+                <h2>Sobre o meuMercadinho</h2>
+
+                <p>O meuMercadinho é um aplicativo que tem como objetivo facilitar a logística de venda dos mercadinhos, onde cliente e mercado ganhem. O cliente é beneficiado com a comodidade, facilidade, segurança e rapidez ao realizar suas compras, e o mercadinho é beneficiado com facilidade em receber a lista de produtos e o endereço, além do interesse dos clientes em comprar em seu estabelecimento. </p>
+
+
+
+
             </div>
+            <div id="sobre2">
+                
+               <h2> Sobre a RAIMAK:</h2>
+
+        <p>A RAIMAK é uma empresa de desenvolvimento de software que busca oferecer soluções inovadoras e significativas para a sociedade.
+
+        A missão da RAIMAK é desenvolver produtos acessíveis, com exclusividade e qualidade, atendendo aos mercadinhos de vizinhança, proporcionando conforto e comodidade aos seus clientes.</p>
+            </div>
+                
         </div>
         <footer id="rodape">
             &copy; Copyright 2016 - by RAIMAK<br>
