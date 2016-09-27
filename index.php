@@ -43,7 +43,7 @@
                     <ul>
                         <li><a href="index.php">home</a></li>
                         <li><a href="_telas/about.php">about</a></li>
-                        <li><a href="index.php">contato</a></li>
+                        <li><a href="_telas/contato.php">contato</a></li>
                         <li><a href="<?= $href_login ?>"><?= $a_login ?></a></li>
                         <?= $produtos ?>
                     </ul>
@@ -69,7 +69,7 @@
                 Os seus produtos em uma loja virtual. no meuMercadinho você tem um espaço virtual, onde oferece os seus produtos pelo aplicativo. Você recebe a lista de pedidos e o endereço de entrega. É muito prático!
                 Cadastre-se e encontre o pacote que oferece o que você procura.</p>
 
-               <a href="http://icomp.ufam.edu.br/">Entre em contato conosco!</a>
+               <a href="_telas/contato.php">Entre em contato conosco!</a>
                </div> 
 
         </div>

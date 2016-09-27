@@ -44,7 +44,7 @@
                     <ul>
                         <li><a href="../index.php">home</a></li>
                         <li><a href="about.php">about</a></li>
-                        <li><a href="index.php">contato</a></li>
+                        <li><a href="contato.php">contato</a></li>
                         <li><a href="<?= $href_login ?>"><?= $a_login ?></a></li>
                         <?= $produtos ?>
                     </ul>

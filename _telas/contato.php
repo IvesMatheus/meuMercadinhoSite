@@ -1,5 +1,5 @@
 <?php
-    include_once "../_model/Mercado.php";
+    include_once "_model/Mercado.php";
     session_start();
 
     $mercado = null;
@@ -8,17 +8,15 @@
 
     if($mercado != null)
     {
-        $href_login = "perfil.php";
+        $href_login = "_telas/perfil.php";
         $a_login = "perfil";
-        $produtos = "<li><a href='produtos.php'>produtos</a></li>";
+        $produtos = "<li><a href='_telas/produtos.php'>produtos</a></li>";
     }
     else
     {
         $href_login = "login.php";
         $a_login = "login";
         $produtos = "";
-
-        //header("Location: login.php");
     }
 ?>
 
@@ -34,44 +32,38 @@
         <div id="corpo">
             <header id="cabecalho">
                 <figure>
-                    <a href="../index.php">
+                    <a href="index.php">
                         <img id="logo" src="../_imagens/logo.png"; width="200px"/>
                     </a>
                     
-                         <figcaption><i>meuMercadinho - suas compras em um click.</i></figcaption>
+                        <figcaption><i>meuMercadinho - suas compras em um click.</i></figcaption>
+
                 </figure>
                 <nav id="menu">
                     <ul>
                         <li><a href="../index.php">home</a></li>
                         <li><a href="about.php">about</a></li>
-                       <li><a href="contato.php">contato</a></li>
+                        <li><a href="contato.php">contato</a></li>
                         <li><a href="<?= $href_login ?>"><?= $a_login ?></a></li>
                         <?= $produtos ?>
                     </ul>
                 </nav>
             </header>
-            <nav id="navegacao">
-                <ul>
-                    <li><a href="../index.php">Home</a></li>
-                    <li>&gt;</li>
-                    <li>Login</li>
-                </ul>
-            </nav>
-            <div id="login">
-                <form name="efetua_login" method="POST" action="../_phps/verificaLogin.php">
-                    <div id="nome">
-                        <label for="login" class="lbl">Login</label><br>
-                        <input name="login" type="text" class="txt_grande"/><br>
-                    </div>
-                    <div id="senha">
-                        <label for="senha" class="lbl">Senha</label><br>
-                        <input name="senha" type="password" class="txt_grande"/><br>
-                    </div>
-                    <div id="entrar">
-                        <input name="entrar" type="submit" value="Entrar" class="btn"/>
-                    </div>
-                </form>
+
+            
+            <div id="informativo1">
+             <h2>Cadastre seu Mercadinho</h2>
+            <p style="text-align:justify">Entre em contato conosco para cadastrar seu mercadinho. Após o cadastro, lhe enviaremos as instruções para habilitar seu mercadinho. Sinta-se à vontade. Nos ligue ou mande email.</p>
+
+            <p>
+            (11) 9275-7552</p>
+            <p>contato@raimak.com.br</p>
+                
             </div>
+            
+             
+
+        
         </div>
         <footer id="rodape">
             &copy; Copyright 2016 - by RAIMAK<br>
