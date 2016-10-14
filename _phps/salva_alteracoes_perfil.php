@@ -1,4 +1,6 @@
 <?php
+    print_r($_GET);
+
     include_once "../_dao/MercadoDAO.php";
     session_start();
 

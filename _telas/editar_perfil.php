@@ -34,7 +34,7 @@
 
     /*Upload de imagem*/
 
-     
+
 ?>
 
 <!DOCTYPE html>
@@ -42,11 +42,11 @@
     <head>
         <title>meuMercadinho</title>
         <meta charset="utf-8"/>
-     
+
         <link rel="stylesheet" type="text/css" href="../_css/formulario.css"/>
         <link rel="stylesheet" type="text/css" href="../_css/teste.css"/>
         <link rel="stylesheet" type="text/css" href="../_css/estilo.css"/>
-        
+
     </head>
     <body>
     <!-- ######################## Main Menu ######################## -->
@@ -58,22 +58,22 @@
                          <li><a href="<?= $href_login ?>"><?= $a_login ?></a></li>
                         <?= $li_produtos ?>
                     </ul>
-                    
+
                 </div>
-                
+
         </nav>
 
         <!-- ######################## Header ######################## -->
-        
+
         <header style="background-image: url(../_imagens/fundo-laranja.png);">
              <img src="../_imagens/logo.png" width="30%" style="margin-left: 450px;margin-bottom:-30px">
-              <h2 class="boas_vindas">meuMercadinho! Suas compras em um clique.</h2>    
+              <h2 class="boas_vindas">meuMercadinho! Suas compras em um clique.</h2>
         </header>
 
         <!--
       <h2 style="text-align:center; color: #333;color: #222;
     font-family: 'Helvetica Neue';font-style: normal;line-height: 1.1;margin-bottom: 14px;margin-top:14px;margin-bottom:30px">Tudo em apenas alguns clicks!</h2>-->
-   
+
        <header id="cabecalho_perfil">
                 <figure>
                     <img src="../_imagens/no_image.png" width="130px">
@@ -82,31 +82,27 @@
                 </figure>
                 <span class="lbl_info">Login<br></span>
                 <input id="nome" type="text" class="txt_medio" value="<?= $mercado->getNome() ?>" />
-                
+
         </header>
-            
-   
-      
+
+
+
      <div id="">
                <div id="info_basica_edit">
                     <h1>Informações básicas</h1>
                     <div>
                         <span class="lbl_info">Login<br></span>
                        <input id="login" type="text" class="txt_medio" value="<?= $mercado->getLogin() ?>" />
-                </div>  
+                </div>
                 <div>
                         <span class="lbl_info">Senha<br></span>
-                         <input id="senha" type="password" class="txt_medio" value="<?= ocultarSenha($mercado->getSenha()) ?>" />
-                        
-                    </div>
+                         <input id="senha" type="text" class="txt_medio" value="<?= $mercado->getSenha()?>" />
 
-                 <div>
-                        <input id="mostraSenha" type="checkbox" onclick="mostrarSenha('<?= $mercado->getSenha() ?>')" />&nbsp;Mostrar senha
                     </div>
                  <div>
                         <span class="lbl_info">Código<br></span>
                         <input id ="codigo" type="text" class="txt_medio" value="<?= $mercado->getCodigo()?>"/>
-                    </div>    
+                    </div>
 
     </div>
 
@@ -116,7 +112,7 @@
                         <span class="lbl_info">Rua<br></span>
                         <input id ="rua" type="text" class="txt_medio" value="<?= $mercado->getRua()?>"/>
                     </div>
-      
+
                  <div>
                         <span class="lbl_info">Número<br></span>
                          <input id="numero" type="text" class="txt_pequeno" value="<?= $mercado->getNumero()?>"/>
@@ -173,18 +169,11 @@
             <br>
         </div>
 
-        
-
-         
        <footer id="rodape">
             &copy; Copyright 2016 - by RAIMAK<br><br>
-            <a href="https://www.facebook.com/meuMercadinhoApp">Facebook</a> 
+            <a href="https://www.facebook.com/meuMercadinhoApp">Facebook</a>
         </footer>-->
        <script language="javascript" src="../_js/editar_perfil.js"></script>
-  
-     
-          
-      
 
     </body>
 </html>

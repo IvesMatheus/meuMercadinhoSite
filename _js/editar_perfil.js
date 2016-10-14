@@ -24,7 +24,6 @@ function salvar()
     };
 
     window.location = "../_phps/salva_alteracoes_perfil.php?" + "nome=" + nome + "&login=" + login + "&senha=" + senha + "&codigo=" + codigo + "&rua=" + rua + "&numero=" + numero + "&bairro=" + bairro + "&complemento=" + complemento + "&servico_entrega=" + servico_entrega + "&hora_abertura=" + hora_abertura + "&hora_encerramento=" + hora_encerramento + "&taxa_entrega=" + taxa_entrega + "&vmc=" + vmc;
-
 }
 
 function cancelar()

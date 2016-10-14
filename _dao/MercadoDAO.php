@@ -295,7 +295,7 @@
                 $stm->bindValue("hora_abertura", $mercado->getHoraAbertura());
                 $stm->bindValue("hora_fechamento", $mercado->getHoraFechamento());
                 $stm->bindValue("logo", $mercado->getLogo());
-                $stm->bindValue("servico_entrega", $mercado->getServicoEntrega());
+                $stm->bindValue("servico_entrega", $mercado->getServicoEntrega() == 1 ? true : false);
                 $stm->bindValue("taxa_entrega", $mercado->getTaxaEntrega());
                 $stm->bindValue("vmc", $mercado->getVmc());
                 $stm->bindValue("login", $mercado->getLogin());
