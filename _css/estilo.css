@@ -6,7 +6,7 @@ html
 body
 {
     font-family: sans-serif;
-    background-color: #FF8D51;
+    background-color: white;
     margin: 0px auto 0px auto;
     height: 100%;
 }
@@ -24,7 +24,7 @@ div#corpo
     width: 90%;
     height: auto;
     margin: auto;
-    margin-top: 0px;
+    margin-top: -20px;
     box-shadow: 0px -5px 10px rgba(0, 0, 0, .5);
     box-sizing: border-box;
     overflow-y: hidden;;
@@ -118,18 +118,29 @@ nav#navegacao a
 
 div#login
 {
-    margin: 10px 0px 0px 60px;
+    margin: 10px 0px 0px 415px;
+    background: #f2f2f2 none repeat scroll 0 0;
+    float: left;
+    background: #f2f2f2 none repeat scroll 0 0;
+    width: 35%;
+    height: 35%;
+    padding: 20px;
+    text-align: justify;
+    border: 1px solid #e6e6e6;
+    
 }
 
 div#nome
 {
     margin-bottom: 10px;
+    margin-left: 15%
 }
 
 div#senha
 {
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 15%
 }
 
 div#entrar
@@ -187,6 +198,7 @@ div#categorias
     padding: 20px;
     float:left;
     box-sizing: border-box;
+    margin-top: 10px;
 }
 
 div#categorias h1
@@ -224,6 +236,7 @@ div#filtro
 {
     width: 100%;
     text-align: center;
+    margin-top: 20px
 }
 
 div#itens
@@ -297,6 +310,7 @@ div#add_produto
 {
     width: 90%;
     margin: auto;
+    margin-top: 80px;
 }
 
 div#formulario
@@ -445,6 +459,7 @@ div#formulario_edt
     width: 40%;
     margin:auto;
     box-sizing: border-box;
+    margin-top: 70px
 }
 
 div#op_form_edt
@@ -458,13 +473,20 @@ div#op_form_edt
 
 /* ESTILO PARA PÁGINA DE PERFIL */
 
+/*margin:10px 5px 15px 20px;
+top margin is 10px
+right margin is 5px
+bottom margin is 15px
+left margin is 20px*/
 header#cabecalho_perfil
 {
     width: 70%;
-    margin: auto;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    margin: 150px 0px 35px 200px;
+    /*box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);*/
     text-align: center;
     padding-bottom: 10px;
+    background: #f2f2f2 none repeat scroll 0 0;
+    border: 1px solid #e6e6e6;
 }
 
 header#cabecalho_perfil img
@@ -478,19 +500,27 @@ header#cabecalho_perfil figure
     padding: 0px;
 }
 
-/*
+
+/*padding:10px 5px 15px 20px;
+top padding is 10px
+right padding is 5px
+bottom padding is 15px
+left padding is 20px*/
+
 header#cabecalho_perfil figcaption
 {
-    opacity: 0;
+  /*  opacity: 0;*/
+  margin : 10px  0px 0px 0px;
 }
-*/
-/*
+
+
 header#cabecalho_perfil h1
 {
     font-size: 24pt;
     color: #CA4D0A;
     margin: 0px auto 10px auto;
-}*/
+}
+
 
 
 figcaption{
@@ -501,33 +531,42 @@ figcaption{
 
 }
 
+
+header{
+   background-image: url(../_imagens/fundo-laranja.png);
+   width: 100%;
+}
+
+img{
+    width: 50%;   
+}
+
+.logo{
+    margin-left: 20em;
+       
+}
+
 #informativo1{
     float: left;
-    background: ;
+    background: #f2f2f2 none repeat scroll 0 0;
     width: 35%;
     height: 40%;
-    padding-left: 40px;
+    padding: 20px;
     text-align: justify;
-}
-#imagemMeuMercadinho{
-    float: left;
-    background: ;
-    width: 10%;
-    height: 30% ;
-    padding-right:;
-
-
+    margin-left: 120px;
+    border: 1px solid #e6e6e6;
+    
 }
 
 #informativo2{
     float: right;
-    background: ;
+    background: #f2f2f2 none repeat scroll 0 0;
     width: 35%;
-    height: 40%;
-    padding-left: 40px;
-    padding-right: 45px;
+    height: 35%;
+    padding: 20px;
     text-align: justify;
-    
+    border: 1px solid #e6e6e6;
+    margin-right: 100px;
 }
 
 #sobre1{
@@ -573,11 +612,13 @@ div#info1 h1
 div#info_basica
 {
     padding: 20px;
-    width: 49%;
+    width: 30%;
     float: left;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
     margin-bottom: 10px;
-    box-sizing: border-box;
+    margin-left:15%;
+    background: #f2f2f2 none repeat scroll 0 0;
+    border: 1px solid #e6e6e6;
 }
 
 div#info_basica div
@@ -588,11 +629,13 @@ div#info_basica div
 div#endereco
 {
     padding: 20px;
-    width: 49%;
+    width: 30%;
     float: right;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
-    margin-bottom: 10px;
-    box-sizing: border-box;
+    margin-bottom: 40px;
+    margin-right: 15%;
+    background: #f2f2f2 none repeat scroll 0 0;
+    border: 1px solid #e6e6e6;
 }
 
 div#endereco div
@@ -605,10 +648,13 @@ div#entrega
     padding: 20px;
     width: 70%;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
-    margin: auto;
+    margin:auto;
     box-sizing: border-box;
+    background: #f2f2f2 none repeat scroll 0 0;
+    border: 1px solid #e6e6e6;
     clear: both;
 }
+
 
 div#entrega div
 {
@@ -646,11 +692,34 @@ div#opcoes
 {
     text-align: center;
     width: 70%;
-    margin: 10px auto 0px auto;
+    margin: 50px auto 0px auto;
     padding: 10px;
     box-sizing: border-box;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    background: #f2f2f2 none repeat scroll 0 0;
+    border: 1px solid #e6e6e6;
 }
+
+
+/*ESTILO DA EDIÇÃO DO PERFIL*/
+div#info_basica_edit
+{
+    padding: 30px;
+    width: 30%;
+    float: left;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    margin-bottom: 10px;
+    margin-left:15%;
+    background: #f2f2f2 none repeat scroll 0 0;
+    border: 1px solid #e6e6e6;
+}
+
+
+div#info_basica_edit div
+{
+    margin: 15px auto 15px auto;
+}
+
 
 /* ESTILO DA PÁGINA DE ESCOLHA DE IMAGEM */
 
@@ -697,16 +766,18 @@ div#item_imagem label
 /* ESTILO DO RODAPÉ*/
 
 footer#rodape
-{
-    text-align: center;
-    width: 90%;
-    height: 10%;
-    margin: auto;
-    border-top: 1px solid #F26D26;
-    padding-top: 20px;
-    background-color: white;
-    box-sizing: border-box;
-    box-shadow: 0px -5px 10px rgba(0, 0, 0, .5);
+{   
+    background:rgb(0,0,0); 
+    margin-top: 50%;
+    height:70px;
+    clear: both;
+    color:white;
+    padding-top:20px;
+    padding-left:2%;
+    text-align:center
+
+
+
 
 }
 
@@ -723,3 +794,9 @@ span.lbl_grande
     font-weight: bold;
     color: #CA4D0A;
 }
+
+/*responsive*/
+
+
+
+

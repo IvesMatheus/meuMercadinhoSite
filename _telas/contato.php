@@ -8,9 +8,9 @@
 
     if($mercado != null)
     {
-        $href_login = "_telas/perfil.php";
+        $href_login = "perfil.php";
         $a_login = "perfil";
-        $produtos = "<li><a href='_telas/produtos.php'>produtos</a></li>";
+        $produtos = "<li><a href='produtos.php'>produtos</a></li>";
     }
     else
     {
@@ -25,49 +25,61 @@
     <head>
         <title>meuMercadinho</title>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="../_css/estilo.css"/>
+     
         <link rel="stylesheet" type="text/css" href="../_css/formulario.css"/>
+        <link rel="stylesheet" type="text/css" href="../_css/teste.css"/>
+        <link rel="stylesheet" type="text/css" href="../_css/estilo.css"/>
+        <link rel="stylesheet" type="text/css" href="../_css/responsive.css"/>
+        
+        
     </head>
     <body>
-        <div id="corpo">
-            <header id="cabecalho">
-                <figure>
-                    <a href="index.php">
-                        <img id="logo" src="../_imagens/logo.png"; width="200px"/>
-                    </a>
-                    
-                        <figcaption><i>meuMercadinho - suas compras em um click.</i></figcaption>
-
-                </figure>
-                <nav id="menu">
+    <!-- ######################## Main Menu ######################## -->
+         <nav id="menu2">
+                <div id="1" style="background:rgb(0,0,0); height:80px" >
                     <ul>
-                        <li><a href="../index.php">home</a></li>
-                        <li><a href="about.php">about</a></li>
-                        <li><a href="contato.php">contato</a></li>
-                        <li><a href="<?= $href_login ?>"><?= $a_login ?></a></li>
+                       <li><a href="../index.php">Home</a></li>
+                        <li><a href="contato.php">Contato</a></li>
+                         <li><a href="<?= $href_login ?>"><?= $a_login ?></a></li>
                         <?= $produtos ?>
-                    </ul>
-                </nav>
-            </header>
-
-            
-            <div id="informativo1">
-             <h2>Cadastre seu Mercadinho</h2>
-            <p style="text-align:justify">Entre em contato conosco para cadastrar seu mercadinho. Após o cadastro, lhe enviaremos as instruções para habilitar seu mercadinho. Sinta-se à vontade. Nos ligue ou mande email.</p>
-
-            <p>
-            (11) 9275-7552</p>
-            <p>contato@raimak.com.br</p>
+                    
+                </div>
                 
-            </div>
-            
-             
+        </nav>
 
-        
-        </div>
-        <footer id="rodape">
-            &copy; Copyright 2016 - by RAIMAK<br>
-            Facebook | Twitter
+        <!-- ######################## Header ######################## -->
+         <header>
+             <img class="logo" src="../_imagens/logo.png" >
+              <h2 class="boas_vindas">meuMercadinho! Suas compras em um clique.</h2>    
+        </header>
+
+
+
+      <h2 style="text-align:center; color: #333;color: #222;
+    font-family: 'Helvetica Neue';font-style: normal;line-height: 1.1;margin-bottom: 14px;margin-top:14px;margin-bottom:30px">Tudo em apenas alguns clicks!</h2>
+      
+     <div id="informativo1">
+                <h2>Cadastre seu Mercadinho  agora!</h2>
+                     <p style="text-align:justify">Entre em contato conosco para cadastrar seu mercadinho. Após o cadastro, lhe enviaremos as instruções para habilitar seu mercadinho. Sinta-se à vontade. Nos ligue ou mande email.</p>
+
+                     <p>
+                    (11) 9275-7552</p>
+                    <p>contato@raimak.com.br</p>
+
+    </div>
+      
+    
+
+       <footer id="rodape">
+       
+            &copy; Copyright 2016 - by RAIMAK<br><br>
+           <a href="https://www.facebook.com/meuMercadinhoApp">Facebook</a> 
         </footer>
+
+  
+     
+      
+      
+
     </body>
 </html>

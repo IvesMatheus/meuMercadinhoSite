@@ -92,25 +92,30 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="../_css/estilo.css"/>
         <link rel="stylesheet" type="text/css" href="../_css/formulario.css"/>
+        <link rel="stylesheet" type="text/css" href="../_css/teste.css"/>
     </head>
     <body>
-        <div id="corpo">
-            <header id="cabecalho">
-                <figure>
-                    <a href="../index.php">
-                        <img id="logo" src="../_imagens/logo.png"; width="200px"/>
-                    </a>
-                    <figcaption>Logo do meuMercadinho</figcaption>
-                </figure>
-                <nav id="menu">
+        <div id="">
+             <!-- ######################## Main Menu ######################## -->
+         <nav id="menu2">
+                <div id="1" style="background:rgb(0,0,0); height:80px" >
                     <ul>
-                        <li><a href="../index.php">home</a></li>
+                       <li><a href="../index.php">home</a></li>
                         <li><a href="<?= $href_login ?>"><?= $a_login ?></a></li>
                         <?= $li_produtos ?>
                     </ul>
-                </nav>
-            </header>
-            <nav id="navegacao">
+                    
+                </div>
+                
+        </nav>
+
+        <!-- ######################## Header ######################## -->
+        
+        <header style="background-image: url(../_imagens/fundo-laranja.png);">
+             <img src="../_imagens/logo.png" width="30%" style="margin-left: 450px;margin-bottom:-40px">
+              <h2 class="boas_vindas">meuMercadinho! Suas compras em um clique.</h2>    
+        </header>
+       <!--     <nav id="navegacao">
                 <ul>
                     <li><a href="../index.php">Home</a></li>
                     <li>&gt;</li>
@@ -118,7 +123,9 @@
                     <li>&gt;</li>
                     <li>Adicionar Produtos</li>
                 </ul>
-            </nav>
+            </nav>-->
+
+            
             <div id="add_produto">
                 <div id="formulario">
                     <form>

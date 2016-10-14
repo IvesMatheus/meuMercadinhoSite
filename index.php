@@ -25,43 +25,48 @@
     <head>
         <title>meuMercadinho</title>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+     
         <link rel="stylesheet" type="text/css" href="_css/formulario.css"/>
+        <link rel="stylesheet" type="text/css" href="_css/teste.css"/>
+        <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+        <link rel="stylesheet" type="text/css" href="_css/responsive.css"/>
+        
     </head>
     <body>
-        <div id="corpo">
-            <header id="cabecalho">
-                <figure>
-                    <a href="index.php">
-                        <img id="logo" src="_imagens/logo.png"; width="200px"/>
-                    </a>
-                    
-                        <figcaption><i>meuMercadinho - suas compras em um click.</i></figcaption>
-
-                </figure>
-                <nav id="menu">
+    <!-- ######################## Main Menu ######################## -->
+         <nav id="menu2">
+                <div id="1" style="background:rgb(0,0,0); height:80px;" >
                     <ul>
-                        <li><a href="index.php">home</a></li>
-                        <li><a href="_telas/about.php">about</a></li>
-                        <li><a href="_telas/contato.php">contato</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="_telas/about.php">About</a></li>
+                        <li><a href="_telas/contato.php">Contato</a></li>
                         <li><a href="<?= $href_login ?>"><?= $a_login ?></a></li>
                         <?= $produtos ?>
                     </ul>
-                </nav>
-            </header>
+                    
+                </div>
+                
+        </nav>
 
-            <div id="geral">
-            <div id="informativo1">
+        <!-- ######################## Header ######################## -->
+        
+        <header>
+             <img class="logo" src="_imagens/logo.png" >
+              <h2 class="boas_vindas">meuMercadinho! Suas compras em um clique.</h2>    
+        </header>
+       <!-- 
+
+      <h2 style="text-align:center; color: #333;color: #222;
+    font-family: 'Helvetica Neue';font-style: normal;line-height: 1.1;margin-bottom: 14px;margin-top:14px;margin-bottom:30px">Tudo em apenas alguns clicks!</h2>
+      -->
+     <div id="informativo1">
                 <h2>Consumidores</h2>
 
                 <p>Em casa, no trabalho, na rua... com o meuMercadinho você faz as suas compras pelo celular, em qualquer lugar!<p>
                  <p>  meuMercadinho é o aplicativo que oferece conforto e facilidade nas suas compras. Com o meuMErcadinho você pode realizar suas compras em qualquer lugar. Basta baixar o aplicativo, escolher o mercadinho mais proximo de você, selecionar os produtos que você quer comprar e pronto!<p>
-            </div>
-            <!--
-            <div id="imagemMeuMercadinho">
-                    <img id="meuMercadinho" src="_imagens/img1.png" width="180%" height="50%" align="center">-->
-            </div>
-            <div id="informativo2">
+    </div>
+      
+    <div id="informativo2">
             <h2>Mercados</h2>
 
                 <p>O seu mercadinho virtual!
@@ -70,13 +75,22 @@
                 Cadastre-se e encontre o pacote que oferece o que você procura.</p>
 
                <a href="_telas/contato.php">Entre em contato conosco!</a>
-               </div> 
+    </div> 
 
-        </div>
-        </div>
-        <footer id="rodape">
+       <footer id="rodape" >
+       <!--
+        <hr style="width:70%; background-color:#FF8C00;"> 
             &copy; Copyright 2016 - by RAIMAK<br>
-            Facebook | Twitter
-        </footer>
+            Facebook | Twitter-->
+
+             &copy; Copyright 2016 - by RAIMAK<br><br>
+             <a href="https://www.facebook.com/meuMercadinhoApp">Facebook</a>    
+           </footer>
+
+  
+     
+      
+      
+
     </body>
 </html>
